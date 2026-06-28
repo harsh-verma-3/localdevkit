@@ -50,6 +50,16 @@ const registry: ToolPlugin[] = [
     relatedTools: ['base64', 'url-encode'],
     component: dynamic(() => import('@/tools/encoding/html-entities/HtmlEntitiesToolLazy')),
   },
+  {
+    id: 'saml-decoder',
+    name: 'SAML XML Decoder',
+    description: 'Decode and inspect SAML Requests and SAML Responses (base64 and deflate).',
+    category: 'encoding',
+    keywords: ['saml', 'xml', 'decode', 'deflate', 'base64', 'sso', 'adfs'],
+    icon: 'lock-keyhole',
+    relatedTools: ['base64', 'xml-formatter'],
+    component: dynamic(() => import('@/tools/encoding/saml-decoder/SamlDecoderTool')),
+  },
 
   // ── Data Transformation ──────────────────────
   {
@@ -59,7 +69,7 @@ const registry: ToolPlugin[] = [
     category: 'data',
     keywords: ['json', 'format', 'beautify', 'minify', 'validate', 'pretty', 'print', 'lint'],
     icon: 'braces',
-    relatedTools: ['yaml-json', 'csv-json', 'jwt-decoder'],
+    relatedTools: ['yaml-json', 'csv-json', 'jwt-decoder', 'xml-formatter'],
     shortcut: 'mod+shift+j',
     component: dynamic(() => import('@/tools/data/json-formatter/JsonFormatterTool')),
   },
@@ -83,6 +93,16 @@ const registry: ToolPlugin[] = [
     relatedTools: ['json-formatter', 'yaml-json'],
     component: dynamic(() => import('@/tools/data/csv-json/CsvJsonTool')),
   },
+  {
+    id: 'xml-formatter',
+    name: 'XML Formatter & Verifier',
+    description: 'Format XML documents and verify tags structure (well-formedness check).',
+    category: 'data',
+    keywords: ['xml', 'format', 'beautify', 'validate', 'verify', 'tags', 'lint', 'xhtml'],
+    icon: 'code-xml',
+    relatedTools: ['json-formatter', 'saml-decoder'],
+    component: dynamic(() => import('@/tools/data/xml-formatter/XmlFormatterTool')),
+  },
 
   // ── Generators ───────────────────────────────
   {
@@ -92,7 +112,7 @@ const registry: ToolPlugin[] = [
     category: 'generators',
     keywords: ['uuid', 'guid', 'unique', 'id', 'identifier', 'v4', 'v7', 'random'],
     icon: 'fingerprint',
-    relatedTools: ['password-generator', 'hash-generator'],
+    relatedTools: ['password-generator', 'hash-generator', 'guid-converter'],
     component: dynamic(() => import('@/tools/generators/uuid-generator/UuidGeneratorTool')),
   },
   {
@@ -166,6 +186,16 @@ const registry: ToolPlugin[] = [
     icon: 'text-cursor-input',
     relatedTools: ['case-converter', 'regex-tester'],
     component: dynamic(() => import('@/tools/text/word-counter/WordCounterTool')),
+  },
+  {
+    id: 'guid-converter',
+    name: 'GUID / UUID Converter',
+    description: 'Convert GUIDs/UUIDs between 32-character and 36-character formats, upper/lowercase, and validate formats.',
+    category: 'text',
+    keywords: ['guid', 'uuid', 'converter', 'format', 'hyphen', 'strip', 'lowercase', 'uppercase'],
+    icon: 'case-sensitive',
+    relatedTools: ['uuid-generator', 'case-converter'],
+    component: dynamic(() => import('@/tools/text/guid-converter/GuidConverterTool')),
   },
 
   // ── Date & Time ──────────────────────────────
