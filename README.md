@@ -113,7 +113,7 @@ src/
 2. Register it in `src/core/registry.ts` with a `ToolPluginV1` entry
 3. Done — it automatically appears in the sidebar, command palette, dashboard, sitemap, and SEO metadata
 
-See [PLUGIN_CONTRACT.md](PLUGIN_CONTRACT.md) for the full interface specification.
+See [PLUGIN_CONTRACT.md](PLUGIN_CONTRACT.md) for the full interface specification, and [ARCHITECTURE.md](ARCHITECTURE.md) for a detailed look at the core design and state management.
 
 ---
 

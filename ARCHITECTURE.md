@@ -1,7 +1,7 @@
-# ARCH_HANDOFF.md — LocalDevKit Architecture Handoff
+# LocalDevKit Architecture
 
 > **Status:** MVP Complete — 18 tools, all phases done, dev server running on `pnpm dev`  
-> **Purpose:** Complete architectural reference for testing, debugging, or picking up the codebase cold.  
+> **Purpose:** Complete architectural reference guide explaining the codebase design, stack, and patterns.  
 > **Last updated:** 2026-06-27
 
 ---
