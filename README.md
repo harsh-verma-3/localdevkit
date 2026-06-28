@@ -3,6 +3,8 @@
 **A privacy-first, browser-based developer toolbox.**  
 Everything runs locally — no data ever leaves your device.
 
+👉 **[Try the Live Demo](https://localdevkit.vercel.app/)**
+
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Next.js](https://img.shields.io/badge/Next.js-15-black)](https://nextjs.org)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.9-blue)](https://www.typescriptlang.org)
@@ -45,7 +47,7 @@ Everything runs locally — no data ever leaves your device.
 ### Installation
 
 ```bash
-git clone https://github.com/your-org/localdevkit.git
+git clone https://github.com/harsh-verma-3/localdevkit.git
 cd localdevkit
 pnpm install
 pnpm dev
